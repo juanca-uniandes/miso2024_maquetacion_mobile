@@ -20,21 +20,25 @@ class LoginScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 40),
-              const TextField(
+              TextField(
+                textAlign: TextAlign.center, // Centrar texto
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color(0xFFB4E6F8),
                   hintText: 'Usuario',
+                  hintStyle: TextStyle(color: Color(0xFF129CCE)), // Color del placeholder
                   border: OutlineInputBorder(borderSide: BorderSide.none),
                 ),
               ),
               SizedBox(height: 20),
-              const TextField(
+              TextField(
                 obscureText: true,
+                textAlign: TextAlign.center, // Centrar texto
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color(0xFFB4E6F8),
                   hintText: 'Contraseña',
+                  hintStyle: TextStyle(color: Color(0xFF129CCE)), // Color del placeholder
                   border: OutlineInputBorder(borderSide: BorderSide.none),
                 ),
               ),
