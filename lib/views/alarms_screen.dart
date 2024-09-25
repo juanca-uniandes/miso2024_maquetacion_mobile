@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:miso2024_maquetacion_mobile/views/login_screen.dart';
 
 class AlarmScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          },
+        ),
         title: Text('Tus alarmas', style: TextStyle(fontFamily: 'Roboto')),
         backgroundColor: Color(0xFFB4E6F8),
       ),
@@ -12,13 +21,11 @@ class AlarmScreen extends StatelessWidget {
         padding: EdgeInsets.all(20),
         color: Color(0xFFF5F5F5),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Alineación izquierda para títulos
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Botón de crear nueva alarma centrado
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Lógica para crear nueva alarma
                 },
                 child: Text('Crear nueva alarma'),
                 style: ElevatedButton.styleFrom(
@@ -30,18 +37,15 @@ class AlarmScreen extends StatelessWidget {
             ),
             SizedBox(height: 40),
 
-            // Título de la sección de filtrar alarmas alineado a la izquierda
             Text(
               'Filtrar alarmas',
               style: TextStyle(fontSize: 22, fontFamily: 'Roboto'),
             ),
             SizedBox(height: 20),
 
-            // Inputs y botón de filtrar centrados
             Center(
               child: Column(
                 children: [
-                  // Input para filtrar por nombre
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -54,7 +58,6 @@ class AlarmScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
 
-                  // Input para filtrar por fecha
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
@@ -67,10 +70,8 @@ class AlarmScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
 
-                  // Botón de filtrar centrado
                   ElevatedButton(
                     onPressed: () {
-                      // Lógica para aplicar filtro
                     },
                     child: Text('Filtrar'),
                     style: ElevatedButton.styleFrom(
