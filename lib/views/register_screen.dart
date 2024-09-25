@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miso2024_maquetacion_mobile/views/alarms_screen.dart';
 import 'package:miso2024_maquetacion_mobile/views/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -56,7 +57,12 @@ class RegisterScreen extends StatelessWidget {
               SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () {
-                  // Lógica para registrar usuario
+                  // Navegar a la pantalla de alarmas después de registrar
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => AlarmScreen(),  // Ir a la pantalla de alarmas
+                    ),
+                  );
                 },
                 child: Text('Registrar'),
                 style: ElevatedButton.styleFrom(
@@ -68,8 +74,11 @@ class RegisterScreen extends StatelessWidget {
               SizedBox(height: 20),
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => LoginScreen()));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),  // Ir a la pantalla de inicio de sesión
+                    ),
+                  );
                 },
                 child: Text('¿Ya tienes una cuenta? Inicia sesión aquí'),
                 style: TextButton.styleFrom(
