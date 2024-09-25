@@ -63,6 +63,8 @@ flutter:
           - asset: fonts/Roboto-Regular.ttf
           - asset: fonts/Roboto-Medium.ttf
           - asset: fonts/Roboto-Bold.ttf
+  assets:
+      - assets/imgs/reloj.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
