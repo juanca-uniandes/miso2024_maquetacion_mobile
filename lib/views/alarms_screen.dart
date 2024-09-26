@@ -26,6 +26,7 @@ class AlarmScreen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
+                  // Acción para crear una nueva alarma
                 },
                 child: Text('Crear nueva alarma'),
                 style: ElevatedButton.styleFrom(
@@ -72,6 +73,7 @@ class AlarmScreen extends StatelessWidget {
 
                   ElevatedButton(
                     onPressed: () {
+                      // Acción para filtrar alarmas
                     },
                     child: Text('Filtrar'),
                     style: ElevatedButton.styleFrom(
@@ -127,19 +129,63 @@ class AlarmScreen extends StatelessWidget {
                             return [
                               PopupMenuItem(
                                 value: 'editar',
-                                child: Text('Editar'),
+                                child: Container(
+                                  width: double.infinity, // Ocupa todo el ancho
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFB4E6F8),
+                                    border: Border.all(
+                                      color: Color(0xFF129CCE), // Borde de color
+                                      width: 2,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.symmetric(vertical: 15), // Alto máximo
+                                  child: Center(child: Text('Editar')),
+                                ),
                               ),
                               PopupMenuItem(
                                 value: 'duplicar',
-                                child: Text('Duplicar'),
+                                child: Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFB4E6F8),
+                                    border: Border.all(
+                                      color: Color(0xFF129CCE),
+                                      width: 2,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.symmetric(vertical: 15),
+                                  child: Center(child: Text('Duplicar')),
+                                ),
                               ),
                               PopupMenuItem(
                                 value: 'inactivar',
-                                child: Text('Inactivar / Activar'),
+                                child: Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFB4E6F8),
+                                    border: Border.all(
+                                      color: Color(0xFF129CCE),
+                                      width: 2,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.symmetric(vertical: 15),
+                                  child: Center(child: Text('Activar / Inactivar')),
+                                ),
                               ),
                               PopupMenuItem(
                                 value: 'eliminar',
-                                child: Text('Eliminar'),
+                                child: Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFB4E6F8),
+                                    border: Border.all(
+                                      color: Color(0xFF129CCE),
+                                      width: 2,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.symmetric(vertical: 15),
+                                  child: Center(child: Text('Eliminar')),
+                                ),
                               ),
                             ];
                           },
