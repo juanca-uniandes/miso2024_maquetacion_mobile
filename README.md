@@ -40,3 +40,7 @@
 ### Notas Adicionales
 - Si tienes problemas con permisos en el emulador, asegúrate de que esté correctamente configurado.
 - Puedes consultar la documentación oficial de Flutter en [https://flutter.dev/docs](https://flutter.dev/docs) para más información.
+
+
+## Video demostrando funcionamiento del APK
+https://youtu.be/pYoX4vodIjY
